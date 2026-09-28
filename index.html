@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scott DeGroot | Licensed ACA Health Insurance Agent</title>
+  <style>
+    :root {
+      --primary: #1b5e20;
+      --primary-dark: #0d3811;
+      --accent: #2e7d32;
+      --accent-light: #4caf50;
+      --bg-light: #f7faf7;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --white: #ffffff;
+      --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Top Sticky Bar */
+    .top-bar {
+      background-color: var(--primary-dark);
+      color: var(--white);
+      padding: 10px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-bar a {
+      color: #a5d6a7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navigation / Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: var(--white);
+      padding: 70px 20px 90px;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .agent-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--white);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      max-width: 750px;
+      margin: 0 auto 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Main Content Container */
+    main {
+      max-width: 1000px;
+      margin: -50px auto 60px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 35px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .section-title {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #2e7d32;
+      color: var(--white);
+      padding: 16px 36px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 56, 17, 0.4);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+      padding: 14px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Trust / Quick Stats Bar */
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-box {
+      background-color: #e8f5e9;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .stat-box h4 {
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 5px;
+    }
+
+    .stat-box p {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background-color: #f9fbf9;
+      border: 1px solid #e2ece2;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Process Steps */
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin: 0 auto 16px;
+    }
+
+    .step-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    /* FAQ Section */
+    .faq-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* CTA Box */
+    .cta-banner {
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border: 2px dashed var(--accent);
+      border-radius: 16px;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111827;
+      color: #9ca3af;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: #a5d6a7;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 24px;
+      }
+      .top-bar {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span>Official ACA Enrollment Portal | Licensed Broker Assistance</span>
+    <span>Call Direct: <a href="tel:8038513598">803-851-3598</a></span>
+  </div>
+
+  <!-- Hero Header -->
+  <header>
+    <div class="hero-container">
+      <img src="https://i.imgur.com/ouQ5vEX.jpg" alt="Scott DeGroot" class="agent-avatar" />
+      <h1>Affordable Health Insurance Made Simple</h1>
+      <p>Qualify for $0 or low-cost monthly healthcare plans through the Official Health Insurance Marketplace with expert, 100% free agent support.</p>
+      
+      <div class="hero-buttons">
+        <a href="https://www.healthsherpa.com/?_agent_id=sco%C7%AB-degroot-woajgg" class="btn-primary" target="_blank" rel="noopener noreferrer">Explore Plans & Prices &rarr;</a>
+        <a href="tel:8038513598" class="btn-secondary">Call 803-851-3598</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Quick Stats / Credentials Bar -->
+    <div class="card">
+      <div class="quick-stats">
+        <div class="stat-box">
+          <h4>Licensed Specialist</h4>
+          <p>Scott DeGroot</p>
+        </div>
+        <div class="stat-box">
+          <h4>National Producer No.</h4>
+          <p>NPN: 16585155</p>
+        </div>
+        <div class="stat-box">
+          <h4>Consultation Cost</h4>
+          <p>100% FREE</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About / Value Proposition -->
+    <div class="card">
+      <h2 class="section-title">Get Covered Without the Stress</h2>
+      <p class="section-subtitle">Navigating health insurance can be confusing. I guide you through every step so you get maximum savings and coverage you can depend on.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Maximize Subsidies</h3>
+          <p>Many individuals and families qualify for federal subsidies that lower monthly premiums to under $10/month or even $0/month.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Keep Your Doctors</h3>
+          <p>We verify doctor networks and prescription drugs before enrolling to ensure your doctors and medication remain covered.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Zero Fees to You</h3>
+          <p>Agent services are completely free. You pay the exact same rate as enrolling directly on government exchanges—with personalized help.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Year-Round Support</h3>
+          <p>I stay available long after enrollment to assist with claim questions, billing updates, or life changes throughout the year.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="https://www.healthsherpa.com/?_agent_id=sco%C7%AB-degroot-woajgg" class="btn-primary" target="_blank" rel="noopener noreferrer">See If You Qualify Online &rarr;</a>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="card">
+      <h2 class="section-title" style="text-align: center;">How It Works</h2>
+      <p class="section-subtitle" style="text-align: center;">Getting quality ACA coverage takes less than 10 minutes.</p>
+
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Check Eligibility</h3>
+          <p>Enter basic information to determine your tax credit savings and subsidy tier.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Compare Options</h3>
+          <p>Compare top plans from leading health carriers side-by-side.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Submit & Enroll</h3>
+          <p>Complete your official enrollment instantly through our secure portal.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="card">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">Who qualifies for ACA Health Insurance?</div>
+        <div class="faq-answer">Most individuals and families residing in the U.S. who are not covered through a Medicare policy or an affordable employer plan qualify for marketplace coverage.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How much does it cost to work with an agent?</div>
+        <div class="faq-answer">It is 100% free. Premium prices are set by federal law and carrier rates, meaning you pay nothing extra for professional guidance.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I get a plan with $0 monthly premium?</div>
+        <div class="faq-answer">Yes, depending on household income and family size, many applicants qualify for government subsidies that reduce monthly premiums to $0.</div>
+      </div>
+    </div>
+
+    <!-- Final Call to Action -->
+    <div class="card cta-banner">
+      <h2 class="section-title">Ready to Find Your Best Coverage?</h2>
+      <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 25px;">Use our fast, secure self-enrollment tool or give me a call directly for personal assistance.</p>
+      
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://www.healthsherpa.com/?_agent_id=sco%C7%AB-degroot-woajgg" class="btn-primary" target="_blank" rel="noopener noreferrer">Start Online Application Now</a>
+        <a href="tel:8038513598" class="btn-primary" style="background-color: var(--primary-dark);">Call 803-851-3598</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Scott DeGroot - Licensed Health Insurance Agent | NPN: 16585155</p>
+    <p style="margin-top: 8px;">Direct Contact: <a href="tel:8038513598">803-851-3598</a> | Independent Insurance Agent Support</p>
+  </footer>
+
+</body>
+</html>
