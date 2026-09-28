@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott DeGroot | Licensed Health Insurance Professional & ACA Expert</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            800: '#102a43',
+                            900: '#0b1d2e',
+                        },
+                        accent: {
+                            green: '#10b981',
+                            blue: '#0284c7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-accent-blue selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand / Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-11 h-11 bg-navy-900 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    SD
+                </div>
+                <div>
+                    <span class="text-lg font-bold text-navy-900 block leading-tight">Scott DeGroot</span>
+                    <span class="text-xs text-slate-500 font-medium">Licensed Insurance Advisor | NPN: 16585155</span>
+                </div>
+            </div>
+
+            <!-- Desktop Contact & CTA -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="tel:8035565757" class="flex items-center space-x-2 text-navy-900 font-semibold hover:text-accent-blue transition">
+                    <div class="w-9 h-9 rounded-full bg-accent-blue/10 flex items-center justify-center text-accent-blue">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="text-lg">803-556-5757</span>
+                </a>
+                <a href="#contact" class="bg-navy-900 hover:bg-navy-800 text-white font-medium px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition">
+                    Get Free Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="flex md:hidden items-center space-x-3">
+                <a href="tel:8035565757" class="w-9 h-9 rounded-full bg-accent-blue/10 flex items-center justify-center text-accent-blue">
+                    <i class="fa-solid fa-phone text-sm"></i>
+                </a>
+                <button id="mobile-menu-btn" class="text-slate-700 hover:text-navy-900 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3">
+            <div class="text-sm font-semibold text-slate-500 pt-1">Call Directly:</div>
+            <a href="tel:8035565757" class="block text-xl font-bold text-navy-900">803-556-5757</a>
+            <a href="#contact" class="block w-full text-center bg-navy-900 text-white font-medium py-2.5 rounded-lg">Get Free Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-navy-900 via-navy-800 to-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-accent-blue/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-accent-green/20 text-accent-green border border-accent-green/30 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">
+                        <i class="fa-solid fa-shield-check"></i>
+                        <span>Official ACA Marketplace Specialist</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Navigating Health Coverage Made <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-green">Simple & Affordable</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0">
+                        Get expert, zero-cost guidance on Affordable Care Act (ACA) plans, subsidies, and custom health solutions tailored for you and your family.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="tel:8035565757" class="w-full sm:w-auto bg-accent-green hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-emerald-500/20 transition flex items-center justify-center space-x-3 text-lg">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <span>Call 803-556-5757</span>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition flex items-center justify-center space-x-2 text-lg">
+                            <span>Request Consultation</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                    <!-- Trust badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800 text-slate-400 text-sm">
+                        <div>
+                            <span class="block text-white font-bold text-lg">100%</span>
+                            <span>Free Consultation</span>
+                        </div>
+                        <div>
+                            <span class="block text-white font-bold text-lg">NPN: 16585155</span>
+                            <span>Licensed Professional</span>
+                        </div>
+                        <div>
+                            <span class="block text-white font-bold text-lg">Multi-State</span>
+                            <span>Licensed Coverage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Card / QR & Form Widget -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-100 relative">
+                        <div class="absolute -top-4 -right-4 bg-accent-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                            Open Enrollment
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-2">Connect With Scott</h3>
+                        <p class="text-slate-600 text-sm mb-6">Scan the QR code with your smartphone camera to save contact info or connect instantly.</p>
+                        
+                        <!-- QR Code Container -->
+                        <div class="bg-slate-50 border-2 border-dashed border-slate-200 rounded-2xl p-6 flex flex-col items-center justify-center mb-6">
+                            <div class="w-40 h-40 bg-white p-3 rounded-xl shadow-inner flex items-center justify-center border border-slate-200">
+                                <!-- Generated SVG QR Code representation for mobile scan simulation -->
+                                <svg class="w-full h-full text-navy-900" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M2,2H10V10H2V2M4,4V8H8V4H4M14,2H22V10H14V2M16,4V8H20V4H16M2,14H10V22H2V14M4,16V20H8V16H4M18,14H22V18H18V14M14,18H18V22H14V18M12,2H14V6H12V2M12,8H14V12H12V8M6,12H8V14H6V12M18,10H22V12H18V10M10,12H12V16H10V12M10,18H12V22H10V18M20,18H22V22H20V18Z"/>
+                                </svg>
+                            </div>
+                            <span class="text-xs font-semibold text-slate-500 mt-3">Scan to Connect / Call</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm bg-slate-100 p-3 rounded-xl">
+                                <span class="text-slate-600 font-medium">Direct Agent:</span>
+                                <span class="font-bold text-navy-900">Scott DeGroot</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm bg-slate-100 p-3 rounded-xl">
+                                <span class="text-slate-600 font-medium">National Producer Number:</span>
+                                <span class="font-bold text-accent-blue font-mono">16585155</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition / Why Work With Me -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">Why Work With Scott DeGroot?</h2>
+                <p class="text-slate-600 text-lg">Navigating healthcare options can be confusing. As your dedicated licensed advisor, I make the process transparent, simple, and entirely focused on your needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-accent-blue/10 text-accent-blue rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Dedicated Guidance</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Personalized one-on-one support to help you understand your options without the confusing insurance jargon.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-accent-green/10 text-accent-green rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Zero-Cost Service</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">My expert consultation and enrollment assistance cost you nothing out of pocket. Plans cost the same directly or through an agent.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-purple-500/10 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Subsidy Optimization</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">I calculate and apply all federal tax credits and premium subsidies you qualify for to lower your monthly payments.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Plan Comparison</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Compare network doctors, prescription drug coverage, deductibles, and out-of-pocket maximums effortlessly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans & Coverage Offered -->
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent-blue font-bold text-sm tracking-wider uppercase">Comprehensive Solutions</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2 mb-4">Coverage Options Tailored For You</h2>
+                <p class="text-slate-600 text-lg">Whether you need marketplace health insurance, supplemental protection, or dental/vision plans, I've got you covered.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Plan 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-white rounded-xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-hospital-user"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-3">ACA / Obamacare Plans</h3>
+                        <p class="text-slate-600 text-sm mb-6">Comprehensive health plans compliant with the Affordable Care Act. Guaranteed issue regardless of pre-existing conditions with income-based subsidies.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accent-green"></i><span>Zero pre-existing condition exclusions</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accent-green"></i><span>10 Essential Health Benefits covered</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accent-green"></i><span>Tax credits applied instantly</span></li>
+                    </ul>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-accent-blue text-white rounded-xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-tooth"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-3">Dental & Vision</h3>
+                        <p class="text-slate-600 text-sm mb-6">Protect your smile and eyesight with robust standalone or bundled dental and vision insurance plans for routine care and major procedures.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accent-blue"></i><span>Preventive checkups covered 100%</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accent-blue"></i><span>Major services & orthodontia options</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accent-blue"></i><span>Vision exams, frames & lenses</span></li>
+                    </ul>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-700 text-white rounded-xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-3">Supplemental Protection</h3>
+                        <p class="text-slate-600 text-sm mb-6">Fill the gaps in your primary health insurance with supplemental indemnity, accident, critical illness, and hospital confinement insurance.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-600"></i><span>Cash benefits paid directly to you</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-600"></i><span>Helps cover out-of-pocket deductibles</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-600"></i><span>Peace of mind during unexpected events</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-accent-green font-bold text-sm tracking-wider uppercase">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 leading-tight">Ready to Find the Right Plan? Let's Talk.</h2>
+                    <p class="text-slate-600 text-lg">
+                        Have questions about open enrollment, subsidies, or plan qualification? Contact Scott DeGroot directly by phone or request a callback at your convenience.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <a href="tel:8035565757" class="flex items-center space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-accent-blue transition group">
+                            <div class="w-12 h-12 rounded-xl bg-accent-blue text-white flex items-center justify-center text-xl group-hover:scale-105 transition">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block font-medium">Direct Phone Line</span>
+                                <span class="text-xl font-bold text-navy-900">803-556-5757</span>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block font-medium">National Producer Number (NPN)</span>
+                                <span class="text-lg font-bold text-navy-900 font-mono">16585155</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                            <div class="w-12 h-12 rounded-xl bg-accent-green text-white flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block font-medium">Licensed States</span>
+                                <span class="text-sm font-bold text-navy-900">Multi-state licensed specializing in ACA & Marketplace solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Form Box -->
+                <div class="bg-navy-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-accent-blue/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <h3 class="text-2xl font-bold mb-2">Request a Call Back</h3>
+                    <p class="text-slate-300 text-sm mb-6">Fill out your details below and Scott will reach out to discuss your coverage options.</p>
+
+                    <form id="quote-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Full Name</label>
+                            <input type="text" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-accent-blue" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Phone Number</label>
+                            <input type="tel" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-accent-blue" placeholder="(555) 000-0000">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Email Address</label>
+                            <input type="email" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-accent-blue" placeholder="john@example.com">
+                        </div>
+                        <button type="submit" class="w-full bg-accent-green hover:bg-emerald-600 text-white font-bold py-4 rounded-xl shadow-lg transition text-center">
+                            Submit Request
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden text-center py-8 space-y-3">
+                        <div class="w-16 h-16 bg-accent-green/20 text-accent-green rounded-full flex items-center justify-center mx-auto text-3xl">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h4 class="text-xl font-bold">Request Received!</h4>
+                        <p class="text-slate-300 text-sm">Thank you. Scott DeGroot will contact you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 bg-accent-blue text-white rounded-lg flex items-center justify-center font-bold text-lg">
+                            SD
+                        </div>
+                        <span class="text-lg font-bold text-white">Scott DeGroot</span>
+                    </div>
+                    <p class="text-sm">Dedicated independent health insurance advisor helping individuals and families secure quality ACA and marketplace coverage.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-phone mr-2 text-accent-blue"></i> <a href="tel:8035565757" class="hover:text-white">803-556-5757</a></li>
+                        <li><i class="fa-solid fa-id-badge mr-2 text-accent-blue"></i> NPN: 16585155</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Coverage</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>ACA Marketplace Subsidies</li>
+                        <li>Individual & Family Health</li>
+                        <li>Dental & Vision Plans</li>
+                        <li>Supplemental Protection</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Licensing</h4>
+                    <p class="text-xs leading-relaxed">
+                        Licensed health insurance professional specializing in Affordable Care Act policies. Assisting clients with transparent guidance and customized plan selections.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs space-y-4 md:space-y-0">
+                <p>&copy; 2026 Scott DeGroot Insurance. All rights reserved. NPN: 16585155.</p>
+                <p class="text-slate-500 text-center md:text-right max-w-xl">
+                    Disclaimer: This is an independent advertisement for health insurance enrollment assistance. Not affiliated with any government agency. Plans and subsidies depend on individual qualification.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Form Submission handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('quote-form');
+            const successMsg = document.getElementById('form-success');
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
